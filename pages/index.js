@@ -43,8 +43,8 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
        
-       <label> First Name:</label>
-       <input
+       <label className={styles.firstName}> First Name:</label>
+       <input 
        type= "text"
        id="first"
        name="first"
@@ -54,8 +54,8 @@ export default function Home() {
        onChange= {(e => setFormData({...formData, firstName: e.target.value}))}
      
        />
-       <label> Username:</label>
-       <input
+       <label className={styles.username}> Username:</label>
+       <input className={styles.inputs}
          type= "text"
          id="username"
          name="username"
@@ -68,7 +68,7 @@ export default function Home() {
        />
 
 
-       <button type="submit" onClick={() => checkLogin()}>submit</button>
+       <button class={styles.button} type="submit" onClick={() => checkLogin()}>submit</button>
       </main>
     </>
   )
